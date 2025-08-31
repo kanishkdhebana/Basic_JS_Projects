@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    background: linear-gradient(145deg, rgba(15, 12, 41, 0.6), rgba(48, 43, 99, 0.6));
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 35px rgba(155, 89, 182, 0.3);
+    position: relative;
+    border: 1px solid rgba(200, 160, 255, 0.3);
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #c8a0ff;
+    text-shadow: 0 0 15px rgba(200, 160, 255, 0.7);
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+.score-container {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: #a9a9d4;
+}
+
+#gameCanvas {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 1px solid rgba(200, 160, 255, 0.2);
+}
+
+@keyframes twinkle {
+    0% { transform: scale(0.5); opacity: 0.5; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.5); opacity: 0.5; }
+}
+
+.stars-base {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+#stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    animation: twinkle 7s linear infinite;
+    box-shadow: -1vw 3vh #FFF, 52vw -3vh #FFF, -8vw -27vh #FFF, 73vw 36vh #FFF, -29vw -3vh #FFF, 15vw 17vh #FFF, -83vw -22vh #FFF, 4vw -94vh #FFF, 34vw 97vh #FFF, -66vw -70vh #FFF, 80vw -53vh #FFF, -50vw 81vh #FFF, -87vw -80vh #FFF, 42vw 84vh #FFF, 89vw -59vh #FFF, -84vw -3vh #FFF, 3vw 12vh #FFF, -54vw -4vh #FFF, 73vw -9vh #FFF, -48vw -59vh #FFF, 67vw 2vh #FFF, -1vw -52vh #FFF, 61vw 60vh #FFF, 21vw -4vh #FFF, -83vw -94vh #FFF, 20vw 80vh #FFF, 84vw -70vh #FFF, -26vw 43vh #FFF, 5vw -7vh #FFF, 25vw 26vh #FFF, -93vw -39vh #FFF, -61vw 85vh #FFF, 1vw -90vh #FFF, 71vw 3vh #FFF, -3vw 8vh #FFF, 6vw 4vh #FFF, -20vw -35vh #FFF, 94vw 3vh #FFF, -91vw -44vh #FFF, 53vw 81vh #FFF, -16vw 21vh #FFF, 91vw -85vh #FFF, -75vw 62vh #FFF, 38vw 53vh #FFF, -5vw 4vh #FFF, 40vw -10vh #FFF, 7vw 73vh #FFF, -48vw 26vh #FFF, 53vw 42vh #FFF, -57vw -5vh #FFF, 1vw 9vh #FFF, 80vw -2vh #FFF, -55vw 12vh #FFF, 21vw 3vh #FFF, -44vw 4vh #FFF, 92vw -2vh #FFF, -73vw 5vh #FFF, 65vw 1vh #FFF, -41vw 21vh #FFF, 81vw 46vh #FFF, -11vw 47vh #FFF, 80vw -55vh #FFF, 29vw 1vh #FFF, -75vw 15vh #FFF, 31vw -8vh #FFF, 16vw 53vh #FFF, -2vw 46vh #FFF, 92vw -61vh #FFF, 41vw 61vh #FFF, -11vw 90vh #FFF, -8vw -80vh #FFF, 69vw 76vh #FFF, -61vw 11vh #FFF, 9vw -53vh #FFF, 54vw 35vh #FFF, -2vw -50vh #FFF, 1vw 89vh #FFF, -35vw 71vh #FFF, -6vw 2vh #FFF, 14vw -4vh #FFF, 2vw -8vh #FFF, -4vw 16vh #FFF;
+}
+
+#stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    animation: twinkle 10s linear infinite;
+    box-shadow: -2vw -80vh #FFF, 8vw 46vh #FFF, -92vw -9vh #FFF, 98vw 81vh #FFF, 83vw -69vh #FFF, -17vw -55vh #FFF, 77vw 41vh #FFF, 34vw -69vh #FFF, -1vw 73vh #FFF, 40vw -26vh #FFF, 96vw 5vh #FFF, -53vw 8vh #FFF, 2vw -2vh #FFF, -10vw -4vh #FFF, 14vw 2vh #FFF, 24vw -3vh #FFF, -8vw -21vh #FFF, 99vw 21vh #FFF, 65vw -26vh #FFF, -59vw -42vh #FFF, 52vw 1vh #FFF, 91vw -19vh #FFF, -72vw -2vh #FFF, 52vw 14vh #FFF, 42vw -3vh #FFF, -92vw -8vh #FFF, 70vw 1vh #FFF, 81vw -4vh #FFF, -4vw -2vh #FFF, 11vw 16vh #FFF, 8vw -12vh #FFF, -7vw -3vh #FFF, 20vw 2vh #FFF, 11vw -1vh #FFF, -1vw -1vh #FFF, -14vw 9vh #FFF, 21vw 11vh #FFF, -95vw 1vh #FFF, 64vw -11vh #FFF, 40vw 16vh #FFF, -65vw 91vh #FFF, 24vw -82vh #FFF, -9vw -70vh #FFF, 51vw 60vh #FFF, 32vw -51vh #FFF, -9vw 42vh #FFF, 15vw 31vh #FFF, -81vw 21vh #FFF, 3vw -1vh #FFF, 8vw 9vh #FFF, -12vw 11vh #FFF, 20vw -16vh #FFF, -25vw -21vh #FFF, 30vw 26vh #FFF, 35vw -31vh #FFF, -40vw -36vh #FFF, 45vw 41vh #FFF, 50vw -46vh #FFF, -55vw -51vh #FFF, 60vw 56vh #FFF, 65vw -61vh #FFF, -70vw -66vh #FFF, 75vw 71vh #FFF, 80vw -76vh #FFF, -85vw -81vh #FFF, 90vw 86vh #FFF, 95vw -91vh #FFF;
+}
+
+#stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    animation: twinkle 15s linear infinite;
+    box-shadow: -10vw -10vh #FFF, -90vw -90vh #FFF, 50vw -50vh #FFF, -5vw 95vh #FFF, 95vw -5vh #FFF, 25vw -75vh #FFF, -75vw -25vh #FFF, 33vw 15vh #FFF, 66vw -85vh #FFF, -15vw -60vh #FFF, 85vw 40vh #FFF, 40vw -80vh #FFF, -60vw -20vh #FFF, 20vw 40vh #FFF, 80vw -60vh #FFF;
+}
+
+
+.game-over-screen {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    display: none;
+    flex-direction: column; align-items: center; justify-content: center;
+    color: #c8a0ff; font-size: 3em; font-weight: 700; border-radius: 20px;
+}
+
+#playAgainButton {
+    background-color: #9b59b6;
+    color: #f0f0f0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 15px 30px; font-size: 0.7em; font-family: 'Orbitron', sans-serif;
+    font-weight: 700; border-radius: 8px; cursor: pointer;
+    transition: all 0.2s ease; text-transform: uppercase;
+}
+
+#playAgainButton:hover {
+    background-color: #8e44ad;
+    box-shadow: 0 0 15px #c8a0ff;
+    transform: scale(1.05);
+}

@@ -1,0 +1,118 @@
+/* General Body & Font Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #e4a30b; /* Sea Green */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+/* Main Content Area */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #d8b905;
+}
+
+/* Product & Cart Item Containers */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card, .cart-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.product-card h3, .cart-item h3 {
+    margin: 0.5rem 0;
+}
+
+.price {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Cart Specific Styles */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+#cart-summary {
+    text-align: right;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+    background-color: #dab019; /* Medium Sea Green */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #b5c942;
+}
+
+.remove-btn {
+    background-color: #DC143C; 
+}
+
+.remove-btn:hover {
+    background-color: #B22222; 
+}
