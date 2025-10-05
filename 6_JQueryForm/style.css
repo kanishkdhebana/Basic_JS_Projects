@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2a2929;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #047bfb;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #047bfb;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-msg {
+    color: #dc534f;
+    font-size: 13px;
+    height: 14px;
+    display: block;
+    margin-top: 4px;
+}
+
+#success-message {
+    color: green;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+}
