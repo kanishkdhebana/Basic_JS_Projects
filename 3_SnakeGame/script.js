@@ -38,9 +38,11 @@ function drawApple() {
     ctx.shadowBlur = 12 ;
     ctx.lineWidth = 3 ;
     ctx.beginPath() ;
+
     const radius = GRID_SIZE / 2 ;
     const appleX = apple.x * GRID_SIZE + radius ;
     const appleY = apple.y * GRID_SIZE + radius ;
+
     ctx.arc(appleX, appleY, radius - 2, 0, 2 * Math.PI) ;
     ctx.fill() ;
     ctx.stroke() ;
@@ -72,7 +74,9 @@ function generateApple() {
     do {
         newAppleX = Math.floor(Math.random() * (CANVAS_WIDTH / GRID_SIZE)) ;
         newAppleY = Math.floor(Math.random() * (CANVAS_HEIGHT / GRID_SIZE)) ;
+
     } while (snake.some(part => part.x === newAppleX && part.y === newAppleY)) ;
+
     apple = { x: newAppleX, y: newAppleY } ;
 }
 
@@ -93,9 +97,16 @@ function changeDirection(event) {
 
 function checkGameOver() {
     for (let i = 4 ; i < snake.length ; i++) {
-        if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) { gameOver = true ; return ; }
+        if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) { 
+            gameOver = true ; 
+            score = document.getElementById('finalScore').textContent = `Final Score: ${score}` ;
+
+            return ; 
+        }
     }
     if (snake[0].x < 0 || snake[0].x >= CANVAS_WIDTH / GRID_SIZE || snake[0].y < 0 || snake[0].y >= CANVAS_HEIGHT / GRID_SIZE) {
+        score = document.getElementById('finalScore').textContent = `Final Score: ${score}` ;
+
         gameOver = true ;
     }
 }

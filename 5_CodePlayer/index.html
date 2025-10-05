@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <h1>Code Player</h1>
+    </header>
+
+    <main class="grid">
+        <section class="panel">
+            <div class="panel-title"> HTML </div>
+            <textarea id="htmlPanel" class="editor" spellcheck="false">
+<h2>Hello from HTML panel</h2>
+<p>Change me and see the output live.</p>
+            </textarea>
+        </section>
+
+        <section class="panel">
+            <div class="panel-title"> CSS </div>
+            <textarea id="cssPanel" class="editor" spellcheck="false">
+body { font-family: system-ui, Arial; padding: 18px; }
+h1 { color: #2b6cb0; }
+p { color: #333; }
+            </textarea>
+        </section>
+
+        <section class="panel">
+            <div class="panel-title"> JAVASCRIPT </div>
+            <textarea id="jsPanel" class="editor" spellcheck="false">
+document.addEventListener('DOMContentLoaded', function(){
+    const p = document.querySelector('p');
+    if (p) p.textContent += ' (updated by JS)';
+    console.log('JS panel executed in iframe');
+});
+            </textarea>
+        </section>
+
+        <section class="panel output-panel" id="output-panel1">
+            <div class="panel-title"> OUTPUT </div>
+            <iframe class="outputframe" id="outputFrame"></iframe>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/player.js"></script>
+</body>
+</html>
